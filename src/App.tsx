@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ConfigProvider, theme } from 'antd'
+import { Toaster } from 'react-hot-toast'
+import { Outlet } from 'react-router-dom'
 
+import i18next from 'i18next'
+import { initReactI18next } from 'react-i18next'
+import './styles/global-style.scss'
+import './styles/reset.scss'
+import './styles/variables.scss'
+import { useEffect } from 'react'
+import { cn } from "./text/cn";
+import { en } from "./text/en";
+import { vi } from "./text/vi";
+import { DefaultLayout } from '~components/layout'
+
+i18next.use(initReactI18next).init({
+  resources: {
+    en: {
+      translation: en,
+    },
+    vi: {
+      translation: vi,
+    },
+    cn: {
+      translation: cn,
+    },
+  },
+  lng: "en",
+  fallbackLng: "en",
+
+  interpolation: {
+    escapeValue: false,
+  },
+});
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ConfigProvider
+      theme={{
+        algorithm: theme.darkAlgorithm,
+        token: {
+          fontSize: 16
+        }
+        // algorithm: [theme.darkAlgorithm, theme.compactAlgorithm],
+      }}
+    >
+      <div className='App'>
+        <DefaultLayout>
+          <Outlet />
+        </DefaultLayout>
+
+        <Toaster />
+      </div>
+    </ConfigProvider>
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,17 @@
+.coins-table-view{
+  display: flex;
+    .ant-table-cell:nth-child(1){
+        text-align: left;
+      }
+    .ant-table-cell{
+      text-align: right;
+    }
+    table{
+      width: 100%;
+    }
+    tbody{
+      tr{
+
+      }
+    }
+} 

@@ -1,0 +1,1 @@
+export {default as AcountLayout} from './account-layout'

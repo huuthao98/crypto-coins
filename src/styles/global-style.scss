@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+
+  --background-color: #343a40;
+  --white-color:rgb(255, 255, 255);
+
+  --font-family: "Source Sans 3", sans-serif;
+
+  // Default layout
+  --default-layout-sidebar-width: 280px;
+
+  --default-layout-header-height: 56px;
+
+ 
+  
+}
+
+body {
+  background: #454d55;
+  font-size: 18px;
+}
+
+.ant-form-item-label >label {
+  font-weight: 700;
+}
+
+.ant-card-head-title {
+  // font-size: 28.8px;
+  font-weight: 700;
+}

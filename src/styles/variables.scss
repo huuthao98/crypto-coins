@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+html {
+  --font-source-sans-family: 'Source Sans 3', sans-serif;
+  --bg-color-main: #8b4513;
+  --bg-color-second: #0a3866;
+  --bg-color-main-soft: #f2f2f2;
+  --text-color: #333;
+  --success-color: rgb(14, 203, 129);
+  --red-color: rgb(246, 70, 93);
+  --white-color: #fff;
+  --dark-color: #454d55;
+  --color-line:#EAECEF;
+
+//text color
+--color-primary-text: #202630;
+--color-text-link: #C99400;
+  //dark
+  --text-color-dark: #fff;
+  --bg-color-dark: #181A20;
+
+  .green {
+    color: var(--success-color);
+  }
+  .red {
+    color: var( --red-color);
+
+  }
+}

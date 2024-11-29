@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "ES6",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -16,11 +12,23 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "~apis/*": ["./src/apis/*"],
+      "~components/*": ["./src/components/*"],
+      "~services": ["./src/services"],
+      "~services/*": ["./src/services/*"],
+      "~utils/*": ["./src/utils/*"],
+      "~store": ["./src/store"],
+      "~store/*": ["./src/store/*"],
+      "~styles/*": ["./src/styles/*"],
+      "~constants/*": ["./src/constants/*"],
+      "~helpers/*": ["./src/helpers/*"],
+      "~hooks/*": ["./src/hooks/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

@@ -1,0 +1,1 @@
+export {default as ChannelInformationPage} from './channel-information-view'
